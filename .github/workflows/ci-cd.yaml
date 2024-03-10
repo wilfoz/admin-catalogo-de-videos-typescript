@@ -73,6 +73,7 @@ jobs:
           file: Dockerfile.prod
           target: development
 
+      # setting env GOOGLE_CLOUD_CREDENTIALS and GOOGLE_CLOUD_STORAGE_BUCKET_NAME in github secrets and variables
       - name: up containers
         env:
           GOOGLE_CLOUD_CREDENTIALS: ${{ secrets.GOOGLE_CLOUD_CREDENTIALS }}
